@@ -22,6 +22,16 @@ function convertPokemonToLi(pokemon) {
         </li>
     `
 }
+function getPokemonErro() {
+    return `
+        <li class="pokemon error">
+            <div class="error">
+                <img src="https://media.giphy.com/media/UHAYP0FxJOmFBuOiC2/giphy.gif"
+                     alt="">
+            </div>
+        </li>
+    `
+}
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {

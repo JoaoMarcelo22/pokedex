@@ -31,4 +31,7 @@ pokeApi.getPokemons = (offset, limit) => {
         .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
         .then((detailRequests) => Promise.all(detailRequests))
         .then((pokemonsDetails) => pokemonsDetails)
+        .catch((e)=>{
+            pokemonList.innerHTML =  getPokemonErro()
+        })
 }
