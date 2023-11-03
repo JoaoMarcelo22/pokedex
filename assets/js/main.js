@@ -22,12 +22,13 @@ function convertPokemonToLi(pokemon) {
         </li>
     `
 }
-function getPokemonErro() {
+function getPokemonErro(e) {
     return `
         <li class="pokemon error">
             <div class="error">
                 <img src="https://media.giphy.com/media/UHAYP0FxJOmFBuOiC2/giphy.gif"
                      alt="">
+                <p>Erro = ${e}</p>
             </div>
         </li>
     `
